@@ -162,7 +162,7 @@ const rightArrowStyles = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  right: "90px",
+  right: "50px",
   fontSize: "25px",
   color: "black",
   zIndex: 3,
