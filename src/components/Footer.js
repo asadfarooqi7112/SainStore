@@ -17,7 +17,7 @@ export default function Footer() {
         ?
     <div className="footer-container">
       {/*<Link to="/" className='footer_title'><img src={logo} style={{width: "100px",height:"100px"}} alt='site-logo'/><p style={{marginTop:"-10px"}}>SAIN STORE</p></Link>*/}
-      <div className="contact-container">
+      <div className="contact-container" style={{width: "100%"}}>
       <div className='dropdown_container'>
           <div className='dropdown_header' onClick={() => setIsConnectWithUsShown(prev => !prev)}>
             <h5 className='dropdown_title'>CONNECT WITH US</h5>
@@ -34,7 +34,7 @@ export default function Footer() {
           )}
         </div>
       </div>
-      <div className="explore-container">
+      <div className="explore-container" style={{width: "100%"}}>
       <div className='dropdown_container'>
           <div className='dropdown_header' onClick={() => setIsExploreWithUsShown(prev => !prev)}>
             <h5 className='dropdown_title'>EXPLORE</h5>
@@ -54,7 +54,7 @@ export default function Footer() {
           )}
         </div>
       </div>
-      <div className="visit-us-container">
+      <div className="visit-us-container" style={{width: "100%"}}>
       <div className='dropdown_container'>
           <div className='dropdown_header' onClick={() => setIsVisitUsShown(prev => !prev)}>
             <h5 className='dropdown_title'>VISIT US</h5>

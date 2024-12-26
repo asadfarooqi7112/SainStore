@@ -1,6 +1,6 @@
 .footer-container {
   display: flex;
-  justify-content: end;
+  justify-content: start;
   gap: 20px;
   padding-left: 20px;
   background-color: #f8f3f0;
