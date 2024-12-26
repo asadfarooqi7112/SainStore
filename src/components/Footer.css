@@ -68,19 +68,6 @@
     justify-content: center;
   }
 
-  .input-field {
-    font-size: 14px; /* Adjusted for smaller screens */
-  }
-
-  .form-button {
-    font-size: 14px; /* Adjusted for smaller screens */
-  }
-
-  .success-message,
-  .error-message {
-    width: 80%; /* Adjusted for smaller screens */
-  }
-
   .f_dropdown_header {
     display: flex;
     padding: 10px 20px;
@@ -103,18 +90,6 @@
 }
 
 @media (max-width: 480px) {
-  .input-field {
-    font-size: 12px; /* Further adjusted for very small screens */
-  }
-
-  .form-button {
-    font-size: 12px; /* Further adjusted for very small screens */
-  }
-
-  .success-message,
-  .error-message {
-    width: 100%; /* Adjusted for very small screens */
-  }
   .f_dropdown_header {
     display: flex;
     padding: 10px 20px;

@@ -33,7 +33,7 @@ export default function Footer() {
             </p>
           )}
       </div>
-      <div className="explore-container" style={{width: "100%"}}>
+      <div className="explore-container" style={{width: "100%", marginTop: "-10px"}}>
           <div className='f_dropdown_header' onClick={() => setIsExploreWithUsShown(prev => !prev)}>
             <h5 className='f_dropdown_title'>EXPLORE</h5>
             <span className='f_dropdown_arrow'>{isExploreWithUsShown ? <FiChevronUp/>  : <FiChevronDown/>}</span>
@@ -51,7 +51,7 @@ export default function Footer() {
             </p>
           )}
       </div>
-      <div className="visit-us-container" style={{width: "100%"}}>
+      <div className="visit-us-container" style={{width: "100%",}}>
           <div className='f_dropdown_header' onClick={() => setIsVisitUsShown(prev => !prev)}>
             <h5 className='f_dropdown_title'>VISIT US</h5>
             <span className='f_dropdown_arrow'>{isVisitUsShown ? <FiChevronUp/>  : <FiChevronDown/>}</span>
