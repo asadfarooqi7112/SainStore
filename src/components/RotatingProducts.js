@@ -93,7 +93,7 @@ const RotatingProducts = ({ slides }) => {
 export default RotatingProducts;
 
 const sliderStyles = {
-  padding: "0 20px",
+  paddingRight: "20px",
   position: "relative",
   width: "100%",
   height: "100%",
@@ -180,7 +180,7 @@ const rightArrowStyles_smaller_devices = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  right: "-10px",
+  right: "10px",
   fontSize: "25px",
   color: "black",
   zIndex: 3,

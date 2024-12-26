@@ -100,7 +100,7 @@ export default function Home(props) {
           Men's Shawls
           <span style={{display: "block", height: "1.5px",backgroundColor: "black", width: "65%", margin: "25px auto 0"}}></span>
         </h3>
-        <div className='card_container'>
+        <div className='shawls_card_container'>
           <RotatingProducts slides =  {shawls}/>
         </div> 
       </div>
