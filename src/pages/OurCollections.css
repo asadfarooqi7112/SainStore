@@ -23,7 +23,10 @@
   }
 
   @media (max-width: 768px) {
+    .products_container{
+        padding: 10px;
+    }
     .our-collections-card_container {
-        gap: 10px;
+        gap: 5px;
       }
   }

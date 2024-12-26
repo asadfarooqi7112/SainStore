@@ -25,7 +25,10 @@
 }
 
   @media (max-width: 768px) {
+    .shawls_products_container{
+      padding: 10px;
+    }
     .shawls-card_container {
-        gap: 10px;
+        gap: 5px;
       }
   }
