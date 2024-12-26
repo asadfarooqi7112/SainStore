@@ -15,6 +15,7 @@
   
   .image_container {
     flex: 1;
+    width: 50%;
     height: auto;
   }
   
