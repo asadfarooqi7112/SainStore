@@ -15,12 +15,10 @@
   
   .image_container {
     flex: 1;
-    width: 50%;
     height: auto;
   }
   
   .product_info_container {
-    width: 50%;
     flex: 1;
   }
   
