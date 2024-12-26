@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /checkout
+Disallow: /order-complete
+Disallow: /not-found
+Disallow: /track-order
+Allow: /
+
+Sitemap: https://alcheez.com/sitemap.xml

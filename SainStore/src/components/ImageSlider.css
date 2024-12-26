@@ -1,0 +1,18 @@
+
+.dots_container{
+    display: flex;
+    justify-content: center;
+  };
+
+
+
+
+@media (max-width: 768px) {
+    .dot_style {
+      color: red;
+      margin: 0 3px;
+      cursor: pointer;
+      font-size: 20px;
+    };
+  
+  }

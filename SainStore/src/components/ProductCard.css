@@ -1,0 +1,105 @@
+.p-card_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 550px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.product_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.product_name {
+    margin: 0;
+}
+
+.sale_price {
+    margin: 0;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.price {
+    margin: 0;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.p-original_price {
+    margin: 0;
+}
+
+.line_through {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Media Query for smaller devices */
+@media (max-width: 768px) {
+    .p-card_container {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 12px 12px 12px;
+        margin-bottom: 10px;
+        width: auto;
+        height: 100%;
+        align-items: center; /* Ensure elements are centered */
+    }
+
+    .p-card-image_container {
+        height: 150px; /* Increased height for better spacing */
+        margin-top: 20px;
+    }
+
+    .product_details {
+        margin-top: 10px; /* Spacing between image and details */
+    }
+
+    .product_name, .sale_price, .price {
+        font-size: 1rem;
+        text-align: center; /* Center-align text */
+        margin: 5px 0; /* Spacing between text lines */
+    }
+
+    .sale_price, .price {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .p-card_container {
+        width: 90%;
+        height: 100%;
+        padding: 0px 8px 8px 8px;
+        align-items: center; /* Ensure elements are centered */
+    }
+
+    .p-card-image_container {
+        height: 125px; /* Adjusted height for better display */
+        margin-bottom: 10px; /* Margin for spacing */
+    }
+
+    .product_details {
+        margin-top: 8px; /* Space between image and text */
+    }
+
+    .product_name, .sale_price, .price {
+        font-size: 0.9rem;
+        text-align: center; /* Ensure text is visible and centered */
+        margin: 4px 0; /* Spacing between lines */
+    }
+
+    .sale_price, .price {
+        font-size: 1rem;
+    }
+}

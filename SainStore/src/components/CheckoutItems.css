@@ -1,0 +1,20 @@
+.cart-item_container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-direction: row; 
+}
+
+.name-price_container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media(max-width:768px){
+    .cart-item_container{
+        gap: 80px;
+    }
+
+}

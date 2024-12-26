@@ -1,0 +1,44 @@
+.banner-container {
+    width: 100%; /* Full width of the screen */
+    overflow: hidden; /* Hide the text once it moves out of view */
+    background-color: black; /* Dark Gray background */
+    color: #fff; /* Gold text */    
+    position: relative;
+    text-align: center; /* Aligns text centrally within the container */
+    height: 40px;
+  }
+  
+.banner-text {
+    display: inline-block;
+    white-space: nowrap; /* Prevents text from wrapping */
+    position: relative;
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  
+/* Styles for larger devices */
+@media(min-width: 1440px) {
+    .banner-container {
+      height: 50px;
+    }
+    
+    .banner-text {
+      font-size: 20px;
+      margin-top: 8px;
+    }
+  }
+
+
+@media(max-width:768px){
+.banner-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 45px;
+    }
+  
+.banner-text {
+    font-size: 14px;
+    margin-top: 4px;
+    animation: slide-left 10s linear infinite; /* Animation to move text */
+    }
+}

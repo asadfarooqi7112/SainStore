@@ -1,0 +1,41 @@
+.cartItem_container{
+    display:flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.image-name-price_container{
+    display:flex;
+    gap:5px;
+}
+.name-price_container{
+    display:flex;
+    flex-direction: column;
+    justify-content: "center";
+}
+.total-price-cancel_container {
+    display:flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+@media(max-width:768px){
+    .cartItem_container{
+        flex-direction: column;
+    }
+    .image-name-price_container{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .name-price_container{
+        align-items: center;
+    }
+    .total-price-cancel_container{
+        flex-direction: column;
+    }
+    .item-name_container {
+        text-align: center;
+    }
+
+}

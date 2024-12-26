@@ -1,0 +1,125 @@
+.home_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home-our-products_container {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+  margin: 20px
+}
+.our-products-image-title_container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.our-products-single-image-title{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor:pointer;
+  font-size: 17px;
+  transition: transform 0.4s ease-out;
+}
+.our-products-single-image-title:hover{
+  transform: scale(1.05);
+}
+.our-products-image{
+  width: 194px;
+  background-color: skyblue;
+}
+
+.whatsapp-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F5F5;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 100;
+  cursor: pointer;
+}
+.new-arrivals_container,.mens-shawls_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.card_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+    width: 100%;
+    height: 100%;
+  }
+
+.view-all_button {
+  background-color: #1E3A8A;
+  color: #ffffff;
+  width: 220px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  align-self: center;
+}
+.view-all_button:active{
+animation: blink 0.2s ease-in-out 2;
+}
+@keyframes blink {
+    0%, 100% {
+      background-color: #333;
+    }
+    50% {
+      background-color: #555;
+    }
+  }
+
+/* Media Query for smaller devices */
+@media (max-width: 768px) {
+  .home-our-products_container {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    margin: 20px
+  }
+  .our-products-image-title_container{
+    align-items: start;
+    flex-wrap: wrap;
+  }
+  .our-products-single-image-title{
+    justify-content: center;
+    align-items: center;
+  }
+  .our-products-image{
+    width: 100px;
+  }
+  .intro_container {
+    height: 300px;
+  }
+
+  .card_container {
+    gap: 10px;
+    margin: 10px;
+  }
+
+  .view-all_button {
+    width: 140px;
+    height: 35px;
+  }
+}

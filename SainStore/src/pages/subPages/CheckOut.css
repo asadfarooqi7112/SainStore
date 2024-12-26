@@ -1,0 +1,113 @@
+.checkoutpage_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 20px;
+}
+.customer-details_container{
+  margin: 10px 10px 10px 50px;
+  width: 50%;
+}
+/* CheckOut.css */
+.checkoutpage_container h1 {
+    font-size: 1.5rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: #333; /* Adjust color as needed */
+  }
+  
+  .checkoutpage_container .input-field {
+    margin-bottom: 20px;
+  }
+  
+  .checkoutpage_container .form-floating {
+    margin-bottom: 20px;
+  }
+  
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+  }
+.input-field:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .input-field::placeholder {
+    color: #aaa;
+    opacity: 1; /* Firefox reduces the opacity of placeholder */
+  }
+  
+  .input-field.error {
+    border-color: #dc3545;
+  }
+  
+  .input-field.success {
+    border-color: #28a745;
+  }
+
+  .form-check.input-field.selected {
+    background-color: #f0f8ff;
+    border: 2px solid #007bff;
+  }
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    color: black;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #4CAF50;
+  }
+  .checkout-item_container{
+    width: 40%; 
+    padding: 40px 10px; 
+    margin-right: 20px; 
+    position: 'sticky'; 
+    top: 0;
+  }
+  .subtotal-container{
+    display: flex; 
+    justify-content: space-between;
+  }
+
+  @media(max-width:768px){
+    .checkoutpage_container{
+      flex-direction: column;
+    }
+    .customer-details_container{
+      margin: 10px 10px 10px 10px;
+      width: 95%;
+    }
+    .checkout-item_container{
+      width: 100%;
+    }
+    .subtotal-container{
+      margin-top: 20px;
+      width: 100%;
+    }
+
+  }

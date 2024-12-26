@@ -1,0 +1,38 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+# --- Security Headers ---
+# Prevent XSS attacks
+Header set X-XSS-Protection "1; mode=block"
+
+# Prevent MIME type sniffing
+Header set X-Content-Type-Options "nosniff"
+
+# Enforce HTTPS connections
+Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+# Prevent clickjacking
+Header set X-Frame-Options "DENY"
+
+# Set Content Security Policy (CSP)
+Header set Content-Security-Policy "
+  default-src 'self';
+  script-src 'self' https://connect.facebook.net https://trusted.cdn.com;
+  connect-src 'self' https://vqvruapmkpjwdrrhnzfr.supabase.co https://www.facebook.com;
+  img-src 'self' https://vqvruapmkpjwdrrhnzfr.supabase.co/storage/v1/object/public/product_images/ https://www.facebook.com data:;
+  font-src 'self' https://fonts.gstatic.com data:;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  object-src 'none';
+  base-uri 'self';
+  frame-ancestors 'none';
+"
+
+# Referrer Policy
+Header set Referrer-Policy "no-referrer-when-downgrade"
+
+# Permissions Policy (formerly Feature-Policy)
+Header set Permissions-Policy "geolocation=(self), microphone=()"

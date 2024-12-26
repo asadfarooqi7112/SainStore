@@ -1,0 +1,224 @@
+.header_container {
+  background-color: white;
+  padding: 10px 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_title {
+  font-family: 'Amiri', serif;
+  font-weight: 700;
+  color: black;
+  margin-right: 20px; /* Adjust margin as needed */
+  font-size: 24px; /* Font size for the title */
+  text-decoration: none;
+}
+
+.nav_list {
+  list-style: none; /* Remove default list styling */
+  display: flex; /* Align items horizontally */
+  margin: 0;
+  padding: 0;
+  flex-grow: 1; /* Make the nav list grow to take available space */
+  justify-content: center; /* Center the nav items */
+}
+
+.nav_item {
+  margin: 0 20px; /* Space between items */
+  color: #000000; /* White text color */
+  font-size: 18px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  position: relative; /* For dropdown or underline effect */
+  transition: color 0.3s; /* Smooth transition for color change */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.nav_item:hover {
+  color: black; /* Change color on hover */
+}
+
+.nav_item::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: black; /* Underline color */
+  transition: width 0.3s; /* Smooth transition for width change */
+  position: absolute;
+  bottom: -5px; /* Position it below the text */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav_item:hover::after {
+  width: 100%; /* Expand underline to full width on hover */
+}
+
+.active {
+  color: black !important; /* Active link color */
+}
+
+.active::after {
+  width: 100%; /* Full width underline for active link */
+}
+
+.cart-button{
+background-color: white;
+width: 40px;
+height: 50px;
+border: 0px;
+color: #ffffff;
+margin-bottom: 4px;
+margin-top: 5px;
+cursor: pointer;
+}
+.cart-item-counter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 58px;
+  top: 58px;
+  background-color: #5433EB;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.electronics_sub_menu {
+  position: absolute;
+  background-color: white;
+
+  width: 20%;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+}
+
+.sub_menu_item {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.sub_menu_item:hover {
+  background-color: rgba(218, 208, 208, 0.934);
+}
+
+.header_container_smaller_devices{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  background-color: white;
+  height: 80px;
+}
+.header_title_smaller_devices {
+  color: black;
+  font-family: 'Amiri', serif;
+  font-weight: 700;
+  margin-top: 15px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.nav_list_smaller_devices{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1; /* Make the nav list grow to take available space */
+}
+.nav_item_smaller_devices {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black; /* White text color */
+  font-size: 18px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  position: relative; /* For dropdown or underline effect */
+  transition: color 0.3s; /* Smooth transition for color change */
+  text-decoration: none; /* Remove underline from links */
+}
+.cart-button-smaller-devices{
+  position: relative; /* Make this the positioning context */
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: -40px;
+  }
+.cart-item-counter-smaller-devices{
+  position: absolute; /* Place it relative to the button */
+  top: -5px; /* Adjust as needed */
+  right: -3px; /* Adjust as needed */
+  background-color: #5433EB;
+  color: white;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+.nav_item_smaller_devices:hover {
+  color: #f4a261; /* Change color on hover */
+}
+
+.nav_item_smaller_devices::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s; /* Smooth transition for width change */
+  position: absolute;
+  bottom: -5px; /* Position it below the text */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav_item_smaller_devices:hover::after {
+  width: 100%; /* Expand underline to full width on hover */
+}
+
+/* Sub-menu container for smaller devices */
+.electronics_sub_menu_smaller {
+  background-color: white; /* Same background color as header */
+  font-size: 12px;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 1px; /* Space between items */
+  opacity: 0; /* Initially hidden */
+  max-height: 0; /* Initially collapsed */
+  overflow: hidden; /* Hide overflowing content */
+  transition: opacity 0.3s ease, max-height 0.3s ease; /* Transition for smooth animation */
+}
+
+/* Show the sub-menu */
+.electronics_sub_menu_smaller.show {
+  opacity: 1;
+  max-height: 500px; /* Adjust according to the height of your content */
+}
+
+.sub_menu_item_smaller {
+  display: block; /* Make sure items are block elements */
+  padding: 6px 20px; /* Padding around each item */
+  text-decoration: none; /* Remove underline from links */
+  color: black; /* Text color */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.sub_menu_item_smaller:hover {
+  background-color: #FFFAFA; /* Hover color for items */
+}
+
+
