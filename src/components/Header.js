@@ -91,7 +91,7 @@ export default function Header() {
                 onMouseLeave={() => setIsElectronicsSubMenu(false)}
                 onClick={() => setIsElectronicsSubMenu(false)}
               >
-                MEN <FiChevronDown />
+                OUR COLLECTIONS <FiChevronDown />
               </NavLink>
               {isElectronicsSubMenu && (
                 <div
@@ -144,7 +144,7 @@ export default function Header() {
                       className="nav_item_smaller_devices"
                       onClick={()=>setSideMenu(false)}
                     >
-                      Men
+                      OUR COLLECTIONS
                     </NavLink>
                       <div
                         style={{

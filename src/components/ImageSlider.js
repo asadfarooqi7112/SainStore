@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import "./ImageSlider.css";
 import {useMediaQuery} from "../hooks/useMediaQuery";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const ImageSlider = ({ slides, product_id }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -59,14 +60,14 @@ const ImageSlider = ({ slides, product_id }) => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      {/*<div>
+      <div>
         <div onClick={goToPrevious} style={leftArrowStyles}>
-          ❰
+          <FiChevronLeft />
         </div>
         <div onClick={goToNext} style={rightArrowStyles}>
-          ❱
+          <FiChevronRight />
         </div>
-      </div> */}
+      </div> 
       <div style={slideStylesWidthBackground} onClick={() => navigate(`/product-details/${product_id}`)}></div>
       <div style={dotsContainerStyles}>
         {slides.map((slide, slideIndex) => (
@@ -89,36 +90,49 @@ const ImageSlider = ({ slides, product_id }) => {
 
 export default ImageSlider;
 
-const slideStyles = {
+const slideStyles = { 
   width: "100%",
   height: "100%",
-  borderRadius: "10px",
-  backgroundSize: "contain",
+  backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center",
 };
 
-/*const rightArrowStyles = {
+const rightArrowStyles = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: "white",
+  width: "40px",
+  height: "40px",
+  borderRadius: "40px",
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  right: "16px",
-  fontSize: "45px",
-  color: "blue",
+  right: "6px",
+  fontSize: "30px",
+  color: "black",
   zIndex: 1,
   cursor: "pointer",
 };
 
 const leftArrowStyles = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: "white",
+  width: "40px",
+  height: "40px",
+  borderRadius: "40px",
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  left: "16px",
-  fontSize: "45px",
-  color: "blue",
+  left: "6px",
+  fontSize: "30px",
+  color: "black",
   zIndex: 1,
   cursor: "pointer",
-};*/
+};
 
 const sliderStyles = {
   position: "relative",

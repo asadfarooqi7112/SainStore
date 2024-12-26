@@ -48,10 +48,10 @@ export default function OurCollections(props) {
       ?
         <div className='products_container'>
           <img src={banner1} alt='electronics-image' className='subproduct-image'/>
-        <h1>Our Collections</h1>
-        <div className='e-card_container'>
-          {OurCollectionsArray}
-        </div>
+          <h1>Our Collections</h1>
+          <div className='our-collections-card_container'>
+            {OurCollectionsArray}
+          </div>
       </div>
       :
       <Loading/>

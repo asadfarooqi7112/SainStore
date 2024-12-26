@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Footer2 from "./components/Footer2";
 
 import Home from "./pages/Home";
 import OurCollections from "./pages/OurCollections";
@@ -43,7 +42,6 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
-        <Footer2 />
     </ShoppingCartProvider>
   );
 }
