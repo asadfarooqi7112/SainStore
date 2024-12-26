@@ -227,7 +227,6 @@ const ProductDetails = (props) => {
             ))}
           </div>
         </div>}
-        <p className='product_description'>Some description text goes here.</p>
         {cartItems.find(item=>item.id===parseInt(params.id)&&item.color===selectedColor)!== undefined  && <div className='quantity_label'>Quantity:<div className='decrement_quantity' onClick={()=>decreaseCartQuantity(params.id, selectedColor)}>-</div>{quantity}<div className='increment_quantity' onClick={()=>increaseCartQuantity(params.id,selectedColor)}>+</div></div>
         }<div className='button_container'>
           {cartItems.find(item=>item.color===selectedColor && item.id===parseInt(params.id))===undefined

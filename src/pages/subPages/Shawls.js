@@ -13,7 +13,7 @@ export default function Shawls() {
   const {productsData} = useProductsContext();
   const shawlsArray = productsData.filter((item) => item.category_id === 1).map((item, index) => (<ProductCard key={index} data={item} />));
   return (
-  <div className='headsets_container'>
+  <div className='shawls_container'>
      <Helmet>
         <html lang="en" />
         <title>Shawls | Sain Store</title>
@@ -43,10 +43,10 @@ export default function Shawls() {
 
 { shawlsArray.length>0
 ?
-    <div className='headsets_products_container'>
-        <img src={banner1} alt='headsets-image' className='subproduct-image'/>
+    <div className='shawls_products_container'>
+        <img src={banner1} alt='shawls-image' className='subproduct-image'/>
         <h1>Shawls</h1>
-        <div className='headsets-card_container'>
+        <div className='shawls-card_container'>
           {shawlsArray}
         </div>
     </div>
