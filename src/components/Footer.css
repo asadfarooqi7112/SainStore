@@ -6,7 +6,7 @@
   background-color: #f8f3f0;
   font-size: 18px;
   font-weight: 400;
-  color: #680e0e;;
+  color: #680e0e;
   padding: 20px;
   width: 100%;
   height: auto;
@@ -80,10 +80,17 @@
   .error-message {
     width: 80%; /* Adjusted for smaller screens */
   }
+
+  .dropdown_header {
+    padding: 10px 20px;
+    background-color: #f8f3f0;
+    border-bottom: 1px solid #680e0e;
+  }
   .dropdown_title {
     font-size: 18px;
     margin: 0 auto;
     font-weight: normal;
+    background-color: #f8f3f0;
   }
   
   .dropdown_arrow {
@@ -93,6 +100,7 @@
   
   .dropdown_content {
     padding: 10px 10px;
+    background-color: #f8f3f0;
   }
 }
 
@@ -112,15 +120,22 @@
   
   .dropdown_header {
     padding: 10px 20px;
+    background-color: #f8f3f0;
+    border-bottom: 1px solid #680e0e;
   }
   
   .dropdown_title {
     font-size: 18px;
     margin: 0 auto;
     font-weight: normal;
+    background-color: #f8f3f0;
   }
   
   .dropdown_arrow {
     font-size: 18px;
+  }
+  .dropdown_content {
+    padding: 10px 10px;
+    background-color: #f8f3f0;
   }
 }
