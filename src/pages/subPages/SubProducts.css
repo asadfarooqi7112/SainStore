@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 .headsets_products_container{
     display: flex;
@@ -11,7 +10,7 @@
 }
 .headsets-card_container {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
