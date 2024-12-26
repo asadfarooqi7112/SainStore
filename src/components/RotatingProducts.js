@@ -78,7 +78,7 @@ const RotatingProducts = ({ slides }) => {
               key={index}
               style={{
                 ...slideStyles,
-                width: `${100 / imagesPerView}%`,
+                width: `${99 / imagesPerView}%`,
               }}
             >
               {slide}
