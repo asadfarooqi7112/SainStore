@@ -139,7 +139,7 @@ const new_arrivals_container = {
   margin: "20px",
   marginBottom: "20px",
   position: "relative",
-  width: "410px",
+  width: "380px",
   height: "600px",
 }
 const new_arrivals_container_smaller_devices = {
