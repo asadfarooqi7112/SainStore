@@ -97,7 +97,6 @@ const sliderStyles = {
   position: "relative",
   width: "100%",
   height: "100%",
-  overflow: "hidden",
 };
 
 const sliderStylesSmallerDevices = {
@@ -108,7 +107,6 @@ const sliderStylesSmallerDevices = {
 const sliderTrackWrapperStyles = {
   width: "100%",
   height: "100%",
-  overflow: "hidden",
 };
 
 const sliderTrackStyles = {
@@ -144,7 +142,7 @@ const leftArrowStyles_smaller_devices = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  left: "12px",
+  left: "0px",
   fontSize: "25px",
   color: "black",
   zIndex: 3,
@@ -180,7 +178,7 @@ const rightArrowStyles_smaller_devices = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  right: "26px",
+  right: "14px",
   fontSize: "25px",
   color: "black",
   zIndex: 3,

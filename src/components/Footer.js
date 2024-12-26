@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Footer.css';
 import { FaInstagram, FaYoutube } from 'react-icons/fa';
 import { FaFacebookF } from "react-icons/fa";
+import { FiChevronUp, FiChevronDown } from "react-icons/fi";
 //import { Link } from 'react-router-dom';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 
@@ -21,7 +22,7 @@ export default function Footer() {
       <div className='dropdown_container'>
           <div className='dropdown_header' onClick={() => setIsConnectWithUsShown(prev => !prev)}>
             <h5 className='dropdown_title'>CONNECT WITH US</h5>
-            <span className='dropdown_arrow'>{isConnectWithUsShown ? '⮝' : '⮟'}</span>
+            <span className='dropdown_arrow'>{isConnectWithUsShown ? <FiChevronUp/> : <FiChevronDown/>}</span>
           </div>
           {isConnectWithUsShown && (
             <p className='dropdown_content'>
@@ -38,7 +39,7 @@ export default function Footer() {
       <div className='dropdown_container'>
           <div className='dropdown_header' onClick={() => setIsExploreWithUsShown(prev => !prev)}>
             <h5 className='dropdown_title'>EXPLORE</h5>
-            <span className='dropdown_arrow'>{isExploreWithUsShown ? '⮝' : '⮟'}</span>
+            <span className='dropdown_arrow'>{isExploreWithUsShown ? <FiChevronUp/>  : <FiChevronDown/>}</span>
           </div>
           {isExploreWithUsShown && (
             <p className='dropdown_content'>
@@ -58,7 +59,7 @@ export default function Footer() {
       <div className='dropdown_container'>
           <div className='dropdown_header' onClick={() => setIsVisitUsShown(prev => !prev)}>
             <h5 className='dropdown_title'>VISIT US</h5>
-            <span className='dropdown_arrow'>{isVisitUsShown ? '⮝' : '⮟'}</span>
+            <span className='dropdown_arrow'>{isVisitUsShown ? <FiChevronUp/>  : <FiChevronDown/>}</span>
           </div>
           {isVisitUsShown && (
             <p className='dropdown_content'>
