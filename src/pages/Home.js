@@ -5,7 +5,7 @@ import { useMediaQuery } from "../hooks/useMediaQuery";
 
 import ProductCard from '../components/ProductCard';
 import RotatingAds from "../components/RotatingAds";
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
 
 import { Helmet } from 'react-helmet-async';
@@ -16,7 +16,7 @@ import banner1 from "../images/home_banner_1.jpeg"
 import banner2 from "../images/home_banner_2.jpeg"
 
 export default function Home(props) {
-  //const navigate = useNavigate()
+  const navigate = useNavigate()
   const isSmallDevice = useMediaQuery('(max-width: 768px)');
 
   const openWhatsApp = () => {
@@ -81,7 +81,8 @@ export default function Home(props) {
 
         <div style={isSmallDevice?new_arrivals_row_smaller_devices:new_arrivals_row}>
           {props.newArrivals.map((item, index) => (
-            <div key={index} style={isSmallDevice?new_arrivals_container_smaller_devices:new_arrivals_container}>
+            <div 
+              key={index} style={isSmallDevice?new_arrivals_container_smaller_devices:new_arrivals_container}>
               <img
                 src={item.productimages[0]?.image_url}
                 alt="Product"
@@ -90,7 +91,10 @@ export default function Home(props) {
                   height: "100%",
                 }}
               />
-              <p style={new_arrivals_name}>{item.name}</p>
+              <p 
+                className='new_arrivals_name'
+                onClick={() => navigate(`/product-details/${item.product_id}`)}
+                >{item.name}</p>
             </div>
           ))}
         </div>
@@ -147,18 +151,4 @@ const new_arrivals_container_smaller_devices = {
   marginBottom: "20px",
   position: "relative",
   height: "600px",
-}
-const new_arrivals_name = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  position: "absolute",
-  height: "60px",
-  bottom: "40px",
-  left: "50%",
-  transform: "translateX(-50%)",
-  backgroundColor: "#3a3a3a",
-  color: "white",
-  width: "100%",
-  cursor: "pointer",
 }
