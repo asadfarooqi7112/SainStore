@@ -19,13 +19,12 @@ export default function Footer() {
     <div className="footer-container">
       {/*<Link to="/" className='footer_title'><img src={logo} style={{width: "100px",height:"100px"}} alt='site-logo'/><p style={{marginTop:"-10px"}}>SAIN STORE</p></Link>*/}
       <div className="contact-container" style={{width: "100%"}}>
-      <div className='dropdown_container'>
-          <div className='dropdown_header' onClick={() => setIsConnectWithUsShown(prev => !prev)}>
-            <h5 className='dropdown_title'>CONNECT WITH US</h5>
-            <span className='dropdown_arrow'>{isConnectWithUsShown ? <FiChevronUp/> : <FiChevronDown/>}</span>
+          <div className='f_dropdown_header' onClick={() => setIsConnectWithUsShown(prev => !prev)}>
+            <h5 className='f_dropdown_title'>CONNECT WITH US</h5>
+            <span className='f_dropdown_arrow'>{isConnectWithUsShown ? <FiChevronUp/> : <FiChevronDown/>}</span>
           </div>
           {isConnectWithUsShown && (
-            <p className='dropdown_content'>
+            <p className='f_dropdown_content'>
             <p>For wholesale bulk quantity orders & queries:</p>
             <p>Email: sainstore532@gmail.com</p>
             <p>WhatsApp: 0310-4897651</p>
@@ -33,16 +32,14 @@ export default function Footer() {
             <p>Instagram: @sarwatofficial</p>
             </p>
           )}
-        </div>
       </div>
       <div className="explore-container" style={{width: "100%"}}>
-      <div className='dropdown_container'>
-          <div className='dropdown_header' onClick={() => setIsExploreWithUsShown(prev => !prev)}>
-            <h5 className='dropdown_title'>EXPLORE</h5>
-            <span className='dropdown_arrow'>{isExploreWithUsShown ? <FiChevronUp/>  : <FiChevronDown/>}</span>
+          <div className='f_dropdown_header' onClick={() => setIsExploreWithUsShown(prev => !prev)}>
+            <h5 className='f_dropdown_title'>EXPLORE</h5>
+            <span className='f_dropdown_arrow'>{isExploreWithUsShown ? <FiChevronUp/>  : <FiChevronDown/>}</span>
           </div>
           {isExploreWithUsShown && (
-            <p className='dropdown_content'>
+            <p className='f_dropdown_content'>
             <p>About Us</p>
             <p>Contact Us</p>
             <p>Shipping Policy</p>
@@ -53,20 +50,17 @@ export default function Footer() {
             <p>Blogs</p>
             </p>
           )}
-        </div>
       </div>
       <div className="visit-us-container" style={{width: "100%"}}>
-      <div className='dropdown_container'>
-          <div className='dropdown_header' onClick={() => setIsVisitUsShown(prev => !prev)}>
-            <h5 className='dropdown_title'>VISIT US</h5>
-            <span className='dropdown_arrow'>{isVisitUsShown ? <FiChevronUp/>  : <FiChevronDown/>}</span>
+          <div className='f_dropdown_header' onClick={() => setIsVisitUsShown(prev => !prev)}>
+            <h5 className='f_dropdown_title'>VISIT US</h5>
+            <span className='f_dropdown_arrow'>{isVisitUsShown ? <FiChevronUp/>  : <FiChevronDown/>}</span>
           </div>
           {isVisitUsShown && (
-            <p className='dropdown_content'>
+            <p className='f_dropdown_content'>
                 <p>Topi bazar ......</p>
             </p>
           )}
-        </div>
       </div>
       <div className="follow-container">
         <a href="https://web.facebook.com/profile.php?id=61563062738768" target="_blank" rel="noopener noreferrer">
