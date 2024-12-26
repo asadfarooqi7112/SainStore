@@ -27,7 +27,7 @@ const ImageGallery = ({ images }) => {
         ))}
       </div>
       <div style={{ marginLeft: '20px' }}>
-        <img src={selectedImage} alt="Selected" style={{ width: 'auto', height: '800px', marginBottom: '10px',}} />
+        <img src={selectedImage} alt="Selected" style={{ width: '500px', height: '800px', marginBottom: '10px',}} />
       </div>
     </div>
   );
