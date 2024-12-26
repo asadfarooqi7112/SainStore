@@ -100,7 +100,7 @@ export default function Footer() {
           <a href="https://www.youtube.com/@alcheez-d9b" target="_blank" rel="noopener noreferrer">
             <FaYoutube size={20} color='#9d0000'/>
           </a>
-      </div>
+        </div>
       </div>
       <div className="explore-container">
         <h5 style={{marginBottom:"40px"}}>EXPLORE</h5>

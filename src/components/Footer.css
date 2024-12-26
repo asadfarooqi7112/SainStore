@@ -1,6 +1,6 @@
 .footer-container {
   display: flex;
-  justify-content: start;
+  justify-content: end;
   gap: 20px;
   padding-left: 20px;
   background-color: #f8f3f0;
@@ -19,7 +19,6 @@
   justify-content: start;
   margin-right: auto;
   line-height: 1.5rem;
-  width: 100%;
 }
 
 .explore-container,.visit-us-container {
@@ -28,7 +27,6 @@
   justify-content: start;
   margin-right: auto;
   line-height: 1rem;
-  width: 100%;
 }
 
 .follow-container {
