@@ -82,6 +82,7 @@
   }
 
   .f_dropdown_header {
+    display: flex;
     padding: 10px 20px;
     border-bottom: 1px solid #680e0e;
   }
@@ -115,6 +116,7 @@
     width: 100%; /* Adjusted for very small screens */
   }
   .f_dropdown_header {
+    display: flex;
     padding: 10px 20px;
     border-bottom: 1px solid #680e0e;
   }
