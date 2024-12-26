@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductCard from '../../components/ProductCard';
 import {useProductsContext } from '../../context/ProductsContext';
-import { useMediaQuery } from "../../hooks/useMediaQuery";
+//import { useMediaQuery } from "../../hooks/useMediaQuery";
 import { Helmet } from 'react-helmet-async';
 import banner1 from "../../images/home_banner_1.jpeg"
 
@@ -9,7 +9,7 @@ import "./SubProducts.css"
 import Loading from '../../components/Loading';
 
 export default function Shawls() {
-  const isSmallDevice = useMediaQuery('(max-width: 768px)');
+  //const isSmallDevice = useMediaQuery('(max-width: 768px)');
   const {productsData} = useProductsContext();
   const shawlsArray = productsData.filter((item) => item.category_id === 1).map((item, index) => (<ProductCard key={index} data={item} />));
   return (

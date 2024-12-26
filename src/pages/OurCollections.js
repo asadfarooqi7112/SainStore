@@ -2,14 +2,14 @@ import React from 'react'
 
 import "./OurCollections.css"
 import ProductCard from '../components/ProductCard'
-import { useMediaQuery } from "../hooks/useMediaQuery";
+//import { useMediaQuery } from "../hooks/useMediaQuery";
 import { Helmet } from 'react-helmet-async';
 import banner1 from "../images/home_banner_1.jpeg"
 
 import Loading from '../components/Loading';
 
 export default function OurCollections(props) {
-  const isSmallDevice = useMediaQuery('(max-width: 768px)');
+  //const isSmallDevice = useMediaQuery('(max-width: 768px)');
   const OurCollectionsArray = props.productsData.map((item,index)=><ProductCard key={index} data = {item} />)
   
   return (

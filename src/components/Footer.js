@@ -1,47 +1,10 @@
-import React, { useState } from 'react';
-import { supabase } from '../supabaseClient';
+import React from 'react';
 import './Footer.css';
-import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaInstagram, FaYoutube } from 'react-icons/fa';
 import { FaFacebookF } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [successMessage, setSuccessMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-      const { error } = await supabase
-        .from('contactus')
-        .insert([{ name, email, message }]);
-
-      if (error) {
-        throw error;
-      }
-
-      setSuccessMessage('Message sent successfully!');
-      clearMessages();
-      setName('');
-      setEmail('');
-      setMessage('');
-    } catch (error) {
-      console.error('Error saving form data:', error.message);
-      setErrorMessage('Failed to send message. Please try again.');
-      clearMessages();
-    }
-  };
-
-  const clearMessages = () => {
-    setTimeout(() => {
-      setSuccessMessage('');
-      setErrorMessage('');
-    }, 5000);
-  };
 
   return (
     <div className="footer-container">
@@ -68,7 +31,7 @@ export default function Footer() {
       </div>
       <div className="explore-container">
         <h5 style={{marginBottom:"40px"}}>EXPLORE</h5>
-        <p>About Us</p>
+        <Link>About Us</Link>
         <p>Contact Us</p>
         <p>Shipping Policy</p>
         <p>Return & Refunds</p>

@@ -5,7 +5,7 @@ import { useMediaQuery } from "../hooks/useMediaQuery";
 
 import ProductCard from '../components/ProductCard';
 import RotatingAds from "../components/RotatingAds";
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
 
 import { Helmet } from 'react-helmet-async';
@@ -16,7 +16,7 @@ import banner1 from "../images/home_banner_1.jpeg"
 import banner2 from "../images/home_banner_2.jpeg"
 
 export default function Home(props) {
-  const navigate = useNavigate()
+  //const navigate = useNavigate()
   const isSmallDevice = useMediaQuery('(max-width: 768px)');
 
   const openWhatsApp = () => {

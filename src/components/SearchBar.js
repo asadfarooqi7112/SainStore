@@ -15,7 +15,6 @@ export default function SearchBar() {
     const [input, setInput] = useState("");
     const [debouncedInput, setDebouncedInput] = useState("");
     const [result, setResult] = useState([]);
-    const [isResult, setIsResult] = useState(true);
     const navigate = useNavigate();
     const searchBarRef = useRef(null);
 
@@ -38,23 +37,9 @@ export default function SearchBar() {
         setResult(filteredResults);  
     }, [debouncedInput, productsData]);
 
-    const handleClickOutside = (event) => {
-        if (searchBarRef.current && !searchBarRef.current.contains(event.target)) {
-            setIsResult(false);
-        }
-    };
-
-    useEffect(() => {
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
-
     function handleSelectedResult(id) {
         navigate(`/product-details/${id}`);
         navigate(0);
-        setIsResult(false);
         setInput("");
     }
 
@@ -64,7 +49,6 @@ export default function SearchBar() {
             navigate(`/search-results?query=${encodeURIComponent(input)}`);
             setSearchResult(result);
             setSearchWord(input);
-            setIsResult(false);
         }
     };
 
@@ -88,7 +72,6 @@ export default function SearchBar() {
                             value={input} 
                             onChange={(e) => {
                                 setInput(e.target.value);
-                                setIsResult(true);
                             }}
                             onKeyDown={handleKeyDown}
                         />
@@ -96,7 +79,6 @@ export default function SearchBar() {
                             navigate(`/search-results?query=${encodeURIComponent(input)}`);
                             setSearchResult(result);
                             setSearchWord(input);
-                            setIsResult(false);
                             setIsSearchOpen(false)
                             }}>
                             Search

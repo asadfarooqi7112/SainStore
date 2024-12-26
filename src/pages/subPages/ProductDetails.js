@@ -214,6 +214,20 @@ const ProductDetails = (props) => {
             <p className='product_price'>Rs.{product.price}</p>
           )}
         </div>
+        {productColors !==undefined &&<div>
+          <p>Color: {selectedColor !=="" && (selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1).toLowerCase())}</p>
+          <div className='swatch_container'>
+            {productColors.map((item,index) => item.product_id===parseInt(params.id) &&(
+              <div
+                key={index}
+                onClick={() => handleColor(item.color)}
+                style={{backgroundColor: item.color, outline: selectedColor === item.color ? '2px solid black' : '2px solid gray'}}
+                className='swatch_style'
+              />
+            ))}
+          </div>
+        </div>}
+        <p className='product_description'>Some description text goes here.</p>
         {cartItems.find(item=>item.id===parseInt(params.id)&&item.color===selectedColor)!== undefined  && <div className='quantity_label'>Quantity:<div className='decrement_quantity' onClick={()=>decreaseCartQuantity(params.id, selectedColor)}>-</div>{quantity}<div className='increment_quantity' onClick={()=>increaseCartQuantity(params.id,selectedColor)}>+</div></div>
         }<div className='button_container'>
           {cartItems.find(item=>item.color===selectedColor && item.id===parseInt(params.id))===undefined
