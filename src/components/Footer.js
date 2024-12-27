@@ -63,10 +63,10 @@ export default function Footer() {
           )}
       </div>
       <div className="follow-container">
-        <a href="https://web.facebook.com/profile.php?id=61563062738768" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/share/1NpzpteYDL/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
         <FaFacebookF size={18} color='#9d0000' />
         </a>
-        <a href="https://www.instagram.com/alcheez/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/sain.store21/" target="_blank" rel="noopener noreferrer">
         <FaInstagram size={20} color='#9d0000'/>
         </a>
         <a href="https://www.youtube.com/@alcheez-d9b" target="_blank" rel="noopener noreferrer">
@@ -79,17 +79,17 @@ export default function Footer() {
       {/*<Link to="/" className='footer_title'><img src={logo} style={{width: "100px",height:"100px"}} alt='site-logo'/><p style={{marginTop:"-10px"}}>SAIN STORE</p></Link>*/}
       <div className="contact-container">
         <h5 style={{marginBottom:"40px"}}>CONNECT WITH US</h5>
-        <p>For wholesale bulk quantity orders & queries:</p>
+        <p>For Wholesale Bulk Quantity Orders & Queries:</p>
         <p>Email: sainstore532@gmail.com</p>
         <p>WhatsApp: 0310-4897651</p>
-        <p>Facebook: facebook.com/sarwatofficialll</p>
-        <p>Instagram: @sarwatofficial</p>
+        <p>Facebook: facebook.com/sainstore</p>
+        <p>Instagram: @sainstore.21</p>
         <div className="follow-container">
 
-          <a href="https://web.facebook.com/profile.php?id=61563062738768" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/share/1NpzpteYDL/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
             <FaFacebookF size={18} color='#9d0000' />
           </a>
-          <a href="https://www.instagram.com/alcheez/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/sain.store21/" target="_blank" rel="noopener noreferrer">
             <FaInstagram size={20} color='#9d0000'/>
           </a>
           <a href="https://www.youtube.com/@alcheez-d9b" target="_blank" rel="noopener noreferrer">
