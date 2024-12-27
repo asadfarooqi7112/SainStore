@@ -13,7 +13,7 @@ if(item==null) return null
 return (
     <div direction='horizontal' gap={2} className='cart-item_container'>
         <div style={{display:"flex",gap:"5px",}}>
-            <img src={item.productimages[0].image_url} style={{width:"100px", height:"75px", objectFit:"cover"}} alt='Product'/>
+            <img src={item.productimages[0].image_url} style={{width:"100px", height:"75px", objectFit:"fill"}} alt='Product'/>
             <div className='name-price_container'>
                 <div>
                     {item.name}

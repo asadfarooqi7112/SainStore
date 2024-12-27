@@ -13,7 +13,7 @@
     return (
         <Stack direction='horizontal' gap={2} className='cartItem_container'>
             <div className='image-name-price_container'>
-                <img src={item.productimages[0].image_url} style={{width:"100px", height:"75px", objectFit:"cover"}} alt='Product'/>
+                <img src={item.productimages[0].image_url} className='cart-product-image' alt='Product'/>
                 <div className='name-price_container'>
                     <div className='item-name_container'>
                         {item.name}
