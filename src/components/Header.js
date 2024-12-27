@@ -144,7 +144,7 @@ export default function Header() {
                       className="nav_item_smaller_devices"
                       onClick={()=>setSideMenu(false)}
                     >
-                      OUR COLLECTIONS
+                      Our Collections
                     </NavLink>
                       <div
                         style={{

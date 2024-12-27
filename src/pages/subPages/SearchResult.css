@@ -25,6 +25,9 @@
     text-align: center;
 }
 @media (max-width: 768px) {
+    .result_container{
+        padding: 10px;
+    }
     .s-card_container {
         gap: 10px;
       }
