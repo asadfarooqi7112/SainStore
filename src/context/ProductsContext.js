@@ -19,7 +19,6 @@ export const useProductsContext = () => {
 export const ProductsProvider = ({ children }) => {
   const [productsData, setProductsData] = useState([]);
   const [newArrivals, setNewArrivals] = useState([]);
-  const [productColors, setProductColors] = useState([]);
 
   const [searchResult, setSearchResult] = useState([]);
   const [searchWord, setSearchWord] = useState("")
@@ -57,24 +56,11 @@ export const ProductsProvider = ({ children }) => {
 
   fetchNewArrivals();
 
-  const fetchProductColors = async () => {
-    const { data, error } = await supabase
-      .from('productcolors')
-      .select('*')
-    if (error) {
-      console.error('Error fetching products:', error);
-    } else {
-      setProductColors(data);
-    }
-  };
-
-  fetchProductColors();
-
   }, []);
 
 
   return (
-    <ProductsContext.Provider value={{productsData,newArrivals, productColors, setSearchResult, searchResult, setSearchWord, searchWord}} >
+    <ProductsContext.Provider value={{productsData, newArrivals, setSearchResult, searchResult, setSearchWord, searchWord}} >
       {children}
     </ProductsContext.Provider>
   );

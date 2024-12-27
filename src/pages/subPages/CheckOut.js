@@ -107,7 +107,6 @@ export default function CheckOut() {
           order_id: order.order_id,
           product_id: item.product_id,
           quantity: cartItem.quantity,
-          color: cartItem.color,
           price: item.sale_price ? item.sale_price : item.price,
         };
       });

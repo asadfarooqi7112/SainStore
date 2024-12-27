@@ -52,7 +52,6 @@ export default function SearchBar() {
         }
     };
 
-    console.log(result)
     return (
         <div className="search-bar-container" ref={searchBarRef}>
             <div style={{ display: 'flex', alignItems: 'center', borderRadius: '4px', padding: '5px' }}>

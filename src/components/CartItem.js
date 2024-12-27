@@ -3,7 +3,7 @@
     import { useProductsContext } from '../context/ProductsContext';
     import "./CartItem.css"
 
-    export default function CartItem({id, color, quantity}) {
+    export default function CartItem({id, quantity}) {
     const {removeFromCart} = useShoppingCart()
     const {productsData} = useProductsContext();
 
@@ -20,7 +20,6 @@
                     </div>
                     <div className='text-muted' style={{fontSize:"0.75rem", display:"flex", justifyContent: 'space-between', marginRight: '15px'}}>
                         <p>Rs. {item.sale_price?item.sale_price:item.price} {quantity>1 && <span className='text-muted' style={{fontSize:"0.65rem"}}> x{quantity}</span>}</p>
-                        <p>Color: {color.charAt(0).toUpperCase() + color.slice(1).toLowerCase()}</p>
                     </div>
                 </div>
             </div>
@@ -28,7 +27,7 @@
                 <div>
                     Rs. {((item.sale_price?item.sale_price:item.price)*quantity).toFixed(2)}
                 </div>
-                <Button variant='outline-danger' size='sm' onClick={()=>removeFromCart(item.product_id, color)}>&times;</Button>
+                <Button variant='outline-danger' size='sm' onClick={()=>removeFromCart(item.product_id)}>&times;</Button>
 
             </div>
         </Stack>

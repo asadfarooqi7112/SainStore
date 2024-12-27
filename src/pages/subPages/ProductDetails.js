@@ -15,7 +15,6 @@ import { useNavigate } from 'react-router-dom';
 import "./ProductDetails.css"
 import { useMediaQuery } from '../../hooks/useMediaQuery';
 import ImageSlider from '../../components/ImageSlider';
-import { useProductsContext } from '../../context/ProductsContext';
 import Loading from "../../components/Loading"
 
 
@@ -31,15 +30,11 @@ const ProductDetails = (props) => {
   const [reviewCount, setReviewCount] = useState([0, 0, 0, 0, 0]);
 
   const {getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart, cartItems,emptyCart} = useShoppingCart();
+  console.log("cartItemsss",cartItems);
 
   const navigate = useNavigate();
-  const {productColors} = useProductsContext()
 
-  console.log("asda",productColors)
-  const defaultColor = productColors.find(item=>(item.product_id===parseInt(params.id)))
-  const [selectedColor, setSelectedColor] = useState(defaultColor ? defaultColor.color: "no color choice");
-
-  const quantity = getItemQuantity(params.id, selectedColor)
+  const quantity = getItemQuantity(params.id)
 
   const isSmallDevice = useMediaQuery('(max-width: 768px)')
 
@@ -99,9 +94,6 @@ const ProductDetails = (props) => {
     emptyCart()
     increaseCartQuantity(id,color)
     navigate('/checkout');
-  }
-  function handleColor(color){
-    setSelectedColor(color)
   }
   const product = props.productsData.find(item => item.product_id === parseInt(params.id));
 
@@ -214,28 +206,15 @@ const ProductDetails = (props) => {
             <p className='product_price'>Rs.{product.price}</p>
           )}
         </div>
-        {productColors !==undefined &&<div>
-          <p>Color: {selectedColor !=="" && (selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1).toLowerCase())}</p>
-          <div className='swatch_container'>
-            {productColors.map((item,index) => item.product_id===parseInt(params.id) &&(
-              <div
-                key={index}
-                onClick={() => handleColor(item.color)}
-                style={{backgroundColor: item.color, outline: selectedColor === item.color ? '2px solid black' : '2px solid gray'}}
-                className='swatch_style'
-              />
-            ))}
-          </div>
-        </div>}
-        {cartItems.find(item=>item.id===parseInt(params.id)&&item.color===selectedColor)!== undefined  && <div className='quantity_label'>Quantity:<div className='decrement_quantity' onClick={()=>decreaseCartQuantity(params.id, selectedColor)}>-</div>{quantity}<div className='increment_quantity' onClick={()=>increaseCartQuantity(params.id,selectedColor)}>+</div></div>
+        {cartItems.find(item=>item.id===parseInt(params.id))!== undefined  && <div className='quantity_label'>Quantity:<div className='decrement_quantity' onClick={()=>decreaseCartQuantity(params.id)}>-</div>{quantity}<div className='increment_quantity' onClick={()=>increaseCartQuantity(params.id)}>+</div></div>
         }<div className='button_container'>
-          {cartItems.find(item=>item.color===selectedColor && item.id===parseInt(params.id))===undefined
+          {cartItems.find(item=> item.id===parseInt(params.id))===undefined
           ?
-          <button className='add_button_style' onClick={()=>{handleAddToCart(params.id, selectedColor)}}>Add to cart</button>
+          <button className='add_button_style' onClick={()=>{handleAddToCart(params.id)}}>Add to cart</button>
           :
-          <button className='remove_button_style' onClick={()=>{handleRemoveFromCart(params.id, selectedColor)}}>Remove from cart</button>
+          <button className='remove_button_style' onClick={()=>{handleRemoveFromCart(params.id)}}>Remove from cart</button>
         }
-          <button className='buy_button_style ' onClick={()=>handleBuyNow(params.id, selectedColor)}>Buy Now</button>
+          <button className='buy_button_style ' onClick={()=>handleBuyNow(params.id)}>Buy Now</button>
         </div>
         <div className='discription_container'>
           <div className='discription_content' dangerouslySetInnerHTML={{ __html: product.description }} />

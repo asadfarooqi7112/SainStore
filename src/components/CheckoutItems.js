@@ -2,7 +2,7 @@ import { useProductsContext } from '../context/ProductsContext';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 import "./CheckoutItems.css"
 
-export default function CheckoutItems({id, color, quantity}) {
+export default function CheckoutItems({id, quantity}) {
 const {productsData} = useProductsContext();
 
 const isSmallDevice = useMediaQuery('(max-width: 768px)');
@@ -20,7 +20,6 @@ return (
                 </div>
                 <div className='text-muted' style={isSmallDevice?priceColorContainerSmallerDevices:priceColorContainer}>
                     <p>Rs. {item.sale_price?item.sale_price:item.price} {quantity>1 && <span className='text-muted' style={{fontSize:"0.65rem"}}> x{quantity}</span>}</p>
-                    <p>Color: {color.charAt(0).toUpperCase() + color.slice(1).toLowerCase()}</p>
                 </div>
             </div>
         </div>
