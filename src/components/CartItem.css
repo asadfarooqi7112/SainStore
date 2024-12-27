@@ -11,16 +11,19 @@
 .cart-product-image{
     width:100px;
     height:75px;
-    object-fit:cover
+    object-fit:fill
 }
 .name-price_container{
     display:flex;
     flex-direction: column;
     justify-content: "center";
+    width: 100%;
+    margin-bottom: -10px;
 }
 .total-price-cancel_container {
     display:flex;
     flex-direction: row;
+    width: 100px;
     gap: 5px;
 }
 

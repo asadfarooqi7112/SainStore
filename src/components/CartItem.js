@@ -19,16 +19,15 @@
                         {item.name}
                     </div>
                     <div className='text-muted' style={{fontSize:"0.75rem", display:"flex", justifyContent: 'space-between', marginRight: '15px'}}>
-                        <p>Rs. {item.sale_price?item.sale_price:item.price} {quantity>1 && <span className='text-muted' style={{fontSize:"0.65rem"}}> x{quantity}</span>}</p>
+                        <p>Rs. {item.sale_price?item.sale_price:item.price} {quantity>1 && <span className='text-muted' style={{fontSize:"0.65rem"}}> x {quantity}</span>}</p>
                     </div>
                 </div>
             </div>
-            <div className='total-price-cancel_container '>
+            <div className='total-price-cancel_container'>
                 <div>
                     Rs. {((item.sale_price?item.sale_price:item.price)*quantity).toFixed(2)}
                 </div>
                 <Button variant='outline-danger' size='sm' onClick={()=>removeFromCart(item.product_id)}>&times;</Button>
-
             </div>
         </Stack>
     )
