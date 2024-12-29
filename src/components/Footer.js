@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './Footer.css';
-import { FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
+//import { FaYoutube } from 'react-icons/fa';
 import { FaFacebookF } from "react-icons/fa";
 import { FiChevronUp, FiChevronDown } from "react-icons/fi";
-//import { Link } from 'react-router-dom';
 import { useMediaQuery } from '../hooks/useMediaQuery';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     const [isConnectWithUsShown, setIsConnectWithUsShown] = useState(false);
@@ -40,14 +41,11 @@ export default function Footer() {
           </div>
           {isExploreWithUsShown && (
             <p className='f_dropdown_content'>
-            <p>About Us</p>
-            <p>Contact Us</p>
-            <p>Shipping Policy</p>
-            <p>Return & Refunds</p>
-            <p>FAQs</p>
-            <p>Privacy Policy</p>
-            <p>Terms of Service</p>
-            <p>Blogs</p>
+              <Link to="/contact-us" style={{color: "#680e0e", textDecoration: "none"}}>Contact Us</Link>
+              <Link to="/shipping-policy" style={{color: "#680e0e", textDecoration: "none"}}>Shipping Policy</Link>
+              <Link to="/refund-policy" style={{color: "#680e0e", textDecoration: "none"}}>Return & Refunds</Link>
+              <Link to="/privacy-policy" style={{color: "#680e0e", textDecoration: "none"}}>Privacy Policy</Link>
+              <Link to="/terms-of-service" style={{color: "#680e0e", textDecoration: "none"}}>Terms of Service</Link>
             </p>
           )}
       </div>
@@ -69,9 +67,9 @@ export default function Footer() {
         <a href="https://www.instagram.com/sain.store21/" target="_blank" rel="noopener noreferrer">
         <FaInstagram size={20} color='#9d0000'/>
         </a>
-        <a href="https://www.youtube.com/@alcheez-d9b" target="_blank" rel="noopener noreferrer">
-        <FaYoutube size={20} color='#9d0000'/>
-        </a>
+          {/*<a href="https://www.youtube.com/@alcheez-d9b" target="_blank" rel="noopener noreferrer">
+            <FaYoutube size={20} color='#9d0000'/>
+          </a>*/}
         </div>
     </div>
     :
@@ -92,24 +90,21 @@ export default function Footer() {
           <a href="https://www.instagram.com/sain.store21/" target="_blank" rel="noopener noreferrer">
             <FaInstagram size={20} color='#9d0000'/>
           </a>
-          <a href="https://www.youtube.com/@alcheez-d9b" target="_blank" rel="noopener noreferrer">
+          {/*<a href="https://www.youtube.com/@alcheez-d9b" target="_blank" rel="noopener noreferrer">
             <FaYoutube size={20} color='#9d0000'/>
-          </a>
+          </a>*/}
         </div>
       </div>
       <div className="explore-container">
-        <h5 style={{marginBottom:"40px"}}>EXPLORE</h5>
-        <p>About Us</p>
-        <p>Contact Us</p>
-        <p>Shipping Policy</p>
-        <p>Return & Refunds</p>
-        <p>FAQs</p>
-        <p>Privacy Policy</p>
-        <p>Terms of Service</p>
-        <p>Blogs</p>
+        <h5 style={{marginBottom:"20px"}}>EXPLORE</h5>
+        <Link to="/contact-us" style={{color: "#680e0e", textDecoration: "none"}}>Contact Us</Link>
+        <Link to="/shipping-policy" style={{color: "#680e0e", textDecoration: "none"}}>Shipping Policy</Link>
+        <Link to="/refund-policy" style={{color: "#680e0e", textDecoration: "none"}}>Return & Refunds</Link>
+        <Link to="/privacy-policy" style={{color: "#680e0e", textDecoration: "none"}}>Privacy Policy</Link>
+        <Link to="/terms-of-service" style={{color: "#680e0e", textDecoration: "none"}}>Terms of Service</Link>
       </div>
       <div className="visit-us-container">
-        <h5 style={{marginBottom:"40px"}}>VISIT US</h5>
+        <h5 style={{marginBottom:"20px"}}>VISIT US</h5>
         <p>Topi bazar ......</p>
       </div>
     </div>

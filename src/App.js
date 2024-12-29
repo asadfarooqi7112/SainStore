@@ -21,6 +21,10 @@ import OrderComplete from "./pages/subPages/OrderComplete";
 import ScrollToTop from "./components/ScrollToTop";
 
 import Shawls from "./pages/subPages/Shawls";
+import ShippingPolicy from "./pages/subPages/ShippingPolicy";
+import RefundPolicy from "./pages/subPages/RefundPolicy";
+import PrivacyPolicy from "./pages/subPages/PrivacyPolicy";
+import TermsOfService from "./TermsOfService";
 
 function App() {
   const {productsData, newArrivals} = useProductsContext();
@@ -40,6 +44,11 @@ function App() {
           <Route path="/search-results" element = {<SearchResult />}/>
           <Route path="/order-complete" element = {<OrderComplete />}/>
           <Route path="*" element={<NotFound />} />
+
+          <Route path="/shipping-policy" element = {<ShippingPolicy/>} />
+          <Route path="/refund-policy" element = {<RefundPolicy/>} />
+          <Route path="/privacy-policy" element = {<PrivacyPolicy/>} />
+          <Route path="/terms-of-service" element = {<TermsOfService/>} />
         </Routes>
         <Footer />
     </ShoppingCartProvider>
